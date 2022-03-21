@@ -1,0 +1,30 @@
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$headings-font-family: 'Merriweather', serif;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+);
+
+@import '~bootstrap/scss/bootstrap';
+
+$brand-colors: (
+  'github': #333,
+  'linkedin': #0073b1,
+);
+
+@each $brand, $color in $brand-colors {
+  .btn-brand-#{$brand} {
+    @include button-variant($color, $color, #fff);
+  }
+}
+
+@import './App.scss';
